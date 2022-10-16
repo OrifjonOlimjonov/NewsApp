@@ -8,21 +8,14 @@ import android.view.ViewGroup
 import dagger.Module
 import uz.orifjon.newsappdagger2.R
 import uz.orifjon.newsappdagger2.databinding.FragmentMainBinding
-
-
+import uz.orifjon.newsappdagger2.utils.viewBindings
 
 class MainFragment : Fragment() {
 
-    private lateinit var binding: FragmentMainBinding
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentMainBinding.inflate(inflater,container,false)
+    private val binding by viewBindings(FragmentMainBinding::bind)
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-
-        return binding.root
     }
 
 

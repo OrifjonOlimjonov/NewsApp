@@ -1,4 +1,4 @@
-package uz.orifjon.newsappdagger2
+package uz.orifjon.newsappdagger2.application
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

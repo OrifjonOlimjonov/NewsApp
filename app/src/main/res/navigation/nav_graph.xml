@@ -3,11 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/onBoardingFragment">
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="uz.orifjon.newsappdagger2.fragments.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="uz.orifjon.newsappdagger2.fragments.tutorial.fragments.OnBoardingFragment"
+        android:label="OnBoardingFragment"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_welcomeScreenFragment"
+            app:destination="@id/welcomeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreenFragment"
+        android:name="uz.orifjon.newsappdagger2.WelcomeScreenFragment"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" />
 </navigation>

@@ -1,7 +1,6 @@
-package uz.orifjon.newsappdagger2.fragments.tutorial.fragments
+package uz.orifjon.newsappdagger2.adapters
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

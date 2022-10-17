@@ -2,20 +2,16 @@ package uz.orifjon.newsappdagger2.fragments.tutorial.fragments
 
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
-import android.system.Os.bind
 import android.view.View
 import androidx.core.view.doOnAttach
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import uz.orifjon.newsappdagger2.R
+import uz.orifjon.newsappdagger2.adapters.OnBoardingAdapter
 import uz.orifjon.newsappdagger2.databinding.FragmentOnBoardingBinding
-import uz.orifjon.newsappdagger2.utils.Constants
+import uz.orifjon.newsappdagger2.utils.HorizontalMarginItemDecoration
 import uz.orifjon.newsappdagger2.utils.viewBindings
-import java.util.*
 
 class OnBoardingFragment : Fragment(R.layout.fragment_on_boarding) {
 

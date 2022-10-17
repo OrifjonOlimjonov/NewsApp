@@ -1,4 +1,4 @@
-package uz.orifjon.newsappdagger2.fragments.tutorial.fragments
+package uz.orifjon.newsappdagger2.utils
 
 import android.content.Context
 import android.graphics.Rect

@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeScreenFragment"
-        android:name="uz.orifjon.newsappdagger2.WelcomeScreenFragment"
+        android:name="uz.orifjon.newsappdagger2.fragments.tutorial.fragments.WelcomeScreenFragment"
         android:label="fragment_welcome_screen"
         tools:layout="@layout/fragment_welcome_screen" />
 </navigation>

@@ -13,7 +13,11 @@ class WelcomeFragment : Fragment() {
 
     private val binding by viewBindings(FragmentSelectTopicsBinding::bind)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
+
+
+
+
 
 
 

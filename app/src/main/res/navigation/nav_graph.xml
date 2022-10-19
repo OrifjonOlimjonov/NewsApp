@@ -23,5 +23,14 @@
         android:id="@+id/welcomeScreenFragment"
         android:name="uz.orifjon.newsappdagger2.fragments.tutorial.fragments.WelcomeScreenFragment"
         android:label="fragment_welcome_screen"
-        tools:layout="@layout/fragment_welcome_screen" />
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreenFragment_to_welcomeFragment"
+            app:destination="@id/selectTopicsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTopicsFragment"
+        android:name="uz.orifjon.newsappdagger2.fragments.tutorial.fragments.SelectTopicsFragment"
+        android:label="fragment_select_topics"
+        tools:layout="@layout/fragment_select_topics" />
 </navigation>

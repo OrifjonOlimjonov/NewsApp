@@ -6,10 +6,10 @@
     app:startDestination="@id/onBoardingFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="uz.orifjon.newsappdagger2.fragments.MainFragment"
+        android:id="@+id/homePageFragment"
+        android:name="uz.orifjon.newsappdagger2.fragments.HomePageFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_home_page" />
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="uz.orifjon.newsappdagger2.fragments.tutorial.fragments.OnBoardingFragment"

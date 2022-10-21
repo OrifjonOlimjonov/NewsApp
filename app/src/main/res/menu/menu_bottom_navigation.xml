@@ -3,20 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/homePageFragment"
-        android:title=""
         android:icon="@drawable/home_page"
-        app:showAsAction="always"/>
+        android:title=""
+        app:showAsAction="always" />
     <item
         android:id="@+id/categoriesFragment"
-        android:title=""
         android:icon="@drawable/categories_page"
-        app:showAsAction="always"/>
+        android:title=""
+        app:showAsAction="always" />
     <item
         android:id="@+id/bookmarksFragment"
         android:title=""
-        app:showAsAction="always"/>
+        android:icon="@drawable/bookmarks_page"
+        app:showAsAction="always" />
     <item
         android:id="@+id/profileFragment"
         android:title=""
-        app:showAsAction="always"/>
+        android:icon="@drawable/profile_page"
+        app:showAsAction="always" />
 </menu>

@@ -1,8 +1,10 @@
 package uz.orifjon.newsappdagger2.fragments.tutorial.fragments
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.doOnAttach
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -22,8 +24,26 @@ class OnBoardingFragment : Fragment(R.layout.fragment_on_boarding) {
 
     private var list = emptyList<String>()
 
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
     private var handler: Handler? = null
     private var update: Runnable? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        sharedPreferences = requireActivity().getSharedPreferences("tutorial", AppCompatActivity.MODE_PRIVATE)
+        editor = sharedPreferences.edit()
+
+
+        val check = sharedPreferences.getBoolean("check", false)
+
+        if(check){
+            findNavController().popBackStack()
+            findNavController().navigate(R.id.homePageFragment)
+        }
+        // Toast.makeText(this, check.toString(), Toast.LENGTH_SHORT).show()
+        editor.putBoolean("check",true).commit()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         loadData()

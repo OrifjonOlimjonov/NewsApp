@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="@dimen/_10sdp"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".fragments.HomePageFragment">
 
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:text="Browse"
+        android:textSize="@dimen/_22ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/sfpro"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:text="Discover things of this world"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="#80000000"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/sfpro"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
 
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:hint="Search"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:background="@drawable/edittext_background"
+        android:layout_height="@dimen/_40sdp"
+        android:drawableLeft="@drawable/search_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv2" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategories"
+        tools:listitem="@layout/item_categories"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edittext" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rvCategories" />
 </androidx.constraintlayout.widget.ConstraintLayout>
